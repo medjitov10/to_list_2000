@@ -1,0 +1,49 @@
+
+
+* { padding: 0; margin: 0; }
+html, body {
+    height: 100%;
+}
+li {
+  list-style: none;
+}
+.sign-in, .row{
+  height: 100%;
+}
+.main-sign-in {
+  background: url('https://cdn-images-1.medium.com/max/1600/0*0NP341kvhSCk--VA.');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sign-in-left {
+  margin: 0 auto;
+  margin-top: 25%;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+
+  border: 3px solid rgb(232, 232, 232);
+  border-radius: 1px 40px 0px;
+  background: rgba(168, 168, 168, 0.5);
+}
+.sign-in-left>div {
+  padding: 10% 0;
+}
+
+
+.sign-in-right {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
+  padding-top: 20%;
+}
+
+.alert {
+  z-index: 100;
+  top: 5%;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  margin: 0 auto;
+  opacity: 0.63;
+}

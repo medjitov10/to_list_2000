@@ -1,0 +1,30 @@
+.footer {
+  position: fixed;
+
+  bottom: 0;
+  width: 100%;
+  height: 19%;
+
+  font-size: 22px;
+  font-family: 'Play', sans-serif;
+  background: rgba(224, 225, 226, 0.8);
+  text-align: center;
+  z-index: 10000;
+}
+
+
+.footer-social-ul li{
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+}
+
+.footer-social-ul li a {
+  color: rgb(62, 64, 66);
+}
+
+.contact{
+  margin-left: 5px;
+  font-size: 18px;
+  vertical-align: super;
+}

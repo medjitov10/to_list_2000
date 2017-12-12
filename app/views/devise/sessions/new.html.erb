@@ -1,0 +1,62 @@
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+<div class="container-fluid sign-in main-sign-in">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs sign-in" >
+      <div class="sign-in-right">
+        <h1 style="text-align: center;">
+          WELCOME TO
+        </h1>
+        <h3 style="text-align: right;">
+          TO_DO_LIST_<b style='font-size: 38px;'>2000</b>
+        </h3>
+        <p style="text-align: right; opacity: 0.5;">
+          A fast and easy way to record down your notes and the things you need to do
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-lg-offset-2 sign-in" >
+      <div class="sign-in-left">
+        <div>
+          <h2>Log in</h2>
+
+          <%= form_for(resource, as: resource_name, html: { id: 'form_id'}, url: session_path(resource_name)) do |f| %>
+            <div class="field" >
+              <%= f.label :email %><br />
+              <%= f.email_field :email, :id => 'password',autofocus: true %>
+            </div>
+
+            <div class="field" >
+              <%= f.label :password %><br />
+              <%= f.password_field :password, :id => 'login', autocomplete: "off" %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end -%>
+            <div class="actions">
+              <%= f.submit "Log in",:class =>"btn btn-sm btn-default btn-outline btn-circle" %>
+              <%= link_to 'Sign Up', new_user_registration_path, :class =>"btn btn-sm btn-default btn-outline btn-circle" %>
+            </div>
+          <% end %>
+          <button class="btn btn-sm btn-default btn-outline btn-circle" onClick="guest();">
+            Guest
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  function guest() {
+    document.getElementById('password').value = 'guest@example.com'
+    document.getElementById('login').value = 'Guest1234';
+    document.getElementById("form_id").submit();
+  }
+</script>

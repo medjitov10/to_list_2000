@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDoListRails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Cairo|Orbitron|Play|Source+Serif+Pro|Sedgwick+Ave" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'list', media: 'all' %>
+    <%= stylesheet_link_tag    'tag', media: 'all' %>
+    <%= stylesheet_link_tag    'task', media: 'all' %>
+    <%= stylesheet_link_tag    'footer', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+      <% flash.each do |type, msg| %>
+    		<div class="text-center alert alert-<%= msg.include?('Invalid') ? 'danger' : msg.include?('successfully') ? 'success' : 'warning' %> alert-dismissable" id="flash_container">
+        </div>
+        <script>
+        	$("#flash_container")
+            .append('<%= msg %>')
+            .delay(1700)
+            .fadeOut("slow");
+        </script>
+
+      <% end %>
+
+
+
+    <%= yield %>
+
+  </body>
+</html>

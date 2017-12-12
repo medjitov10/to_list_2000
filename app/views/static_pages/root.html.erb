@@ -1,0 +1,37 @@
+<div class="container-fluid" >
+  <div class="row">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type='button' class="navbar-toggle" data-toggle='collapse' data-target='#responsive-menu'>
+            <span class="sr-only">Open nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand">TO_DO_LIST_2000</a>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive-menu">
+          <ul class="nav navbar-nav pull-right">
+            <li>
+              <% if current_user %>
+                <a href="#">Welcome, <%= current_user.email.split('@')[0].capitalize %></a>
+              <% else %>
+                <%= link_to 'Sign Up', new_user_registration_path %>
+              <% end %>
+
+            </li>
+            <li>
+              <% if current_user %>
+                <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to 'Log In', new_user_session_path %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content"> REACT IS NOT WORKING </div>

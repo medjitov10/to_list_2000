@@ -1,0 +1,253 @@
+.list-enter {
+  right: 200px;
+  opacity: 0;
+}
+
+.list-enter-active {
+  right: 0px;
+  opacity: 1;
+  transition: all .5s ease-in;
+}
+
+.list-leave {
+  opacity: 1;
+  right: 0px;
+}
+
+.list-leave-active {
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+
+
+
+.to-do-list-input {
+  margin-left: 5%;
+  margin-bottom: 60px;
+  padding: 0;
+  width: 90%;
+  height: 60px;
+  border: 1px solid rgba(65, 65, 81, 0.85);
+}
+
+.to-do-list-input input {
+  padding-left: 5px;
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+}
+
+.to-do-list-input button {
+  border: none;
+  background: white;
+  vertical-align: super;
+
+}
+
+.to-do-list-item-li {
+  padding: 0;
+  height: 50px;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+
+
+  /*font-family: 'Orbitron', sans-serif;*/
+  /*font-family: 'Gloria Hallelujah', cursive;*/
+
+}
+
+.to-do-list-item-li-active {
+  background: rgba(232, 237, 249, 0.8);
+}
+
+.delete-list {
+  padding-left: 5px;
+}
+
+.to-do-list-item-title {
+  width: 80%;
+  height: 50px;
+  padding-left: 15px;
+}
+
+.to-do-list-item-title span {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+.to-do-list-item-edit_delete_icon {
+
+  width: 25%;
+}
+
+.to-do-list-item-edit_delete_icon span {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.to-do-list-item-edit {
+  margin: 0;
+  border: none;
+  width: 80%;
+}
+
+.to-do-list-item-edit-submit-button {
+
+  width: 20%;
+}
+
+.to-do-list-item-li:hover{
+  background: rgba(229, 230, 232, 0.8);
+}
+
+.app {
+  margin-top: 100px;
+  width: 100%;
+}
+.side-bar {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  z-index: 90;
+  left: 4%;
+  background: white;
+  border-right: 1px solid rgba(224, 225, 226, 0.75);
+  border-left: 1px solid rgba(224, 225, 226, 0.75);
+  transition: .5s all ease-in;
+}
+
+
+
+.side-bar-inactive {
+  position: absolute;
+  width: 300px;
+  left: -300px;
+  height: auto;
+  z-index: 90;  background: white;
+  border-right: 1px solid rgba(224, 225, 226, 0.75);
+  transition: .5s all ease-in;
+}
+.main-content {
+  position: absolute;
+  right: 10%;
+  width: 60%;
+  transition: .5s all ease-in;
+  margin-bottom: 19%;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .main-content {
+      right: 5%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .side-bar {
+      width: 80%;
+      left: 10%;
+    }
+    .main-content {
+      width: 40%;
+      display: none;
+    }
+}
+.main-content-inactive {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  right: 3%;
+  transition: .5s all ease-in;
+}
+
+
+
+.side-bar-button {
+  background: white;
+  border: none;
+  position: absolute;
+  left: 10px;
+  z-index: 100;
+  transition: .5s all ease-in;
+}
+
+.side-bar-button-inactive {
+  background: white;
+  border: none;
+  margin-left: 20px;
+  transform: rotateY(180deg);
+  position: absolute;
+  z-index: 100;
+  transition: .5s all ease-in;
+}
+
+.has-danger {
+  border: 2px solid rgba(255, 99, 99, 0.8)!important;
+}
+
+
+.has-warning {
+  border: 2px solid rgb(211, 196, 160);
+}
+
+.text-danger {
+  font-size: 18px!important;
+  padding: 0!important;
+  margin: 0!important;
+  font-family: 'Cairo', sans-serif;
+}
+.text-warning {
+  font-size: 18px;
+}
+
+.qty {
+  position: absolute;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16px;
+  width: auto;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid rgb(224, 225, 226);
+  color: #14293d;
+  top: 28%;
+  right: 70px;
+}
+.qty_not_done {
+  position: absolute;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16px;
+  width: auto;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid rgb(224, 225, 226);
+  color: #14293d;
+  background-color: #FFD2D2;
+  right: 10px;
+  top: 28%;
+}
+.qty_done {
+  position: absolute;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16px;
+  width: auto;
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid rgb(224, 225, 226);
+  color: #14293d;
+  background-color: #DFF2BF;
+  right: 40px;
+  top: 28%;
+}

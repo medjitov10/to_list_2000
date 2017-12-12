@@ -1,0 +1,59 @@
+
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+<div class="container-fluid sign-in main-sign-in">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs sign-in" >
+      <div class="sign-in-right">
+        <h1 style="text-align: center;">
+          WELCOME TO
+        </h1>
+        <h3 style="text-align: right;">
+          TO_DO_LIST_<b style='font-size: 38px;'>2000</b>
+        </h3>
+        <p style="text-align: right; opacity: 0.5; ">
+          A fast and easy way to record down your notes and the things you need to do.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-lg-offset-2 sign-in" >
+      <div class="sign-in-left">
+        <div>
+          <h2>Sign up</h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign Up",:class =>"btn btn-sm btn-default btn-outline btn-circle" %>
+              <%= link_to 'Log In', new_user_session_path, :class =>"btn btn-sm btn-default btn-outline btn-circle" %>
+            </div>
+          <% end %>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
