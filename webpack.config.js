@@ -22,7 +22,7 @@ plugins = plugins.concat(
 );
 
 module.exports = {
-  entry: './frontend/src/index.js',
+  entry: './front_end/src/index.js',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js',

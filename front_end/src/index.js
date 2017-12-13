@@ -3,19 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { Router, hashHistory} from 'react-router';
-import thunk from 'redux-thunk';
 import ReduxPromise from 'redux-promise';
 
 
-import Footer from './components/footer/index.js';
+import Footer from './components/footer/index';
 import ToDoList from './components/to_do_list/to_do_list';
 import SelectedList from './components/to_do_list_task/selected_list';
 import Tag from './components/to_do_list_tags/tags';
 import reducers from './reducers/reducers';
 
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise, thunk)(createStore);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 
 class App extends React.Component {
